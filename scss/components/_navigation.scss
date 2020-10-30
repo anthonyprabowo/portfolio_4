@@ -1,0 +1,24 @@
+/* ============================================= */
+/*              Navigation                       */
+/* ============================================= */
+
+.nav {
+    padding-left: 0;
+    @include flexy($basis: 100%);
+  }
+  
+  .nav-link {
+    text-align: center;
+    border-radius: $border-rad;
+    @include sizing($wid: 100%, $pad: 10px 0);
+    display: block;
+    transition: 
+      background-color .2s ease-in-out, 
+      color .2s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: $white;
+    background-color: $col-border;
+  }
+  

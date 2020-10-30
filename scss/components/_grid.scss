@@ -1,0 +1,31 @@
+/* ============================================= */
+/*              Grid System                      */
+/* ============================================= */
+
+.container {
+    padding: 0 10px;
+  }
+  
+  .row {
+    @include flexy();
+    padding: 1em 10px;
+  }
+  
+  [class^=col] {
+    margin-top: 10px;
+    flex-basis: 100%;
+    min-height: 25px;
+    padding: 10px;
+    border-radius: $border-rad;
+  }
+
+  @each $num, $col in $theme-color {
+    .theme.col-#{$num} {
+      background-color: $col;
+      transition: background-color 0.3s;
+    }
+  }
+  
+  .card {
+    flex-basis: 100%;
+  }

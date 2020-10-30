@@ -1,0 +1,48 @@
+@mixin flexy(
+    $dir: column,
+    $grow: null,
+    $basis: null,
+    $just: null,
+    $align: null,
+) {
+    display: flex;
+    flex-direction: $dir;
+    flex-grow: $grow;
+    flex-basis: $basis;
+    justify-content: $just;
+    align-items: $align;
+}
+
+@mixin sizing(
+    $wid: null,
+    $pad: null,
+    $marg: null,
+) {
+    width: $wid;
+    padding: $pad;
+    margin: $marg;
+}
+
+@mixin positioning(
+    $pos: null,
+    $right: null,
+    $left: null,
+    $top: null,
+    $bottom: null
+) {
+    position: $pos;
+    right: $right;
+    left: $left;
+    top: $top;
+    bottom: $bottom;
+}
+
+@mixin centered (
+    $disp: block,
+    $left: auto,
+    $right: auto,
+) {
+    display: $disp;
+    margin-left: $left;
+    margin-right: $right;
+}

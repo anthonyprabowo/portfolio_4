@@ -1,0 +1,72 @@
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+@media (min-width: $breakpoint) {
+
+    .container {
+      max-width: 1400px;
+      @include centered();
+    }
+    
+    .centered {
+      @include centered();
+    }
+    
+    .row {
+      flex-direction: row;
+    }
+    
+    [class^=col] {
+      @include flexy($dir: null, $just: center, $align: center);
+      margin-top: 0;
+
+      & + & {
+        margin-left: 10px;
+      }
+    }
+
+    @each $num, $col in $theme-color {
+      .theme.col-#{$num}:hover {
+        background-color: lighten($col, 10%);
+      }
+    }
+
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            flex-basis: $col-size * $i;
+        }
+    }
+    
+    .nav {
+        @include flexy($dir: row, $just: flex-end, $align: center);
+        // flex-direction: row;
+        // justify-content: flex-end;
+        // align-items: center;
+        &-link {
+          flex-basis: 100px;
+        }
+    }
+    
+    .btn {
+      padding: 10px 30px;
+      & + & {
+        margin-left: 10px;
+      }
+    }
+
+    @each $sign, $color in $warn-signs {
+      .#{$sign}:hover {
+        background-color: lighten($color, 10%);
+      }
+    }
+
+    .default:hover {
+      background-color: lighten($col-secondary, 20%);
+    }
+    
+    .logo {
+      margin-left: initial;
+      margin-right: initial;
+    }
+    
+    }

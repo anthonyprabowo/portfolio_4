@@ -1,0 +1,19 @@
+/* ============================================= */
+/*              Buttons                          */
+/* ============================================= */
+
+.btn {
+  @include sizing($wid: 100%, $pad: 10px 0);
+  margin-top: 15px;
+  color: $white;
+  border: none;
+  text-transform: $uppercase;
+  border-radius: $border-rad;
+}
+
+@each $sign, $color in $warn-signs {
+  .#{$sign}{
+    background-color: $color;
+    transition: background-color 0.3s;
+  }
+}

@@ -1,0 +1,21 @@
+/* ============================================= */
+/*              Forms                            */
+/* ============================================= */
+
+.form {
+    flex-basis: 100%;
+  }
+  
+  .input{
+    display: block;
+    @include sizing($wid: 94%, $marg: 10px auto 0, $pad: 10px);
+    border: none;
+    border-bottom: 5px solid $col-border;
+  }
+  
+  .hidden {
+    @include positioning($pos: absolute, $left:-10000px, $top: auto);
+    width:1px;
+    height:1px;
+    overflow:hidden;
+  }
