@@ -15,10 +15,9 @@
     transition: 
       background-color .2s ease-in-out, 
       color .2s ease-in-out;
+
+    &:hover {
+      color: $white;
+      background-color: $col-border;
+    }
   }
-  
-  .nav-link:hover {
-    color: $white;
-    background-color: $col-border;
-  }
-  

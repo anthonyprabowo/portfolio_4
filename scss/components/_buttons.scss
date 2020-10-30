@@ -15,5 +15,10 @@
   .#{$sign}{
     background-color: $color;
     transition: background-color 0.3s;
+
+    &:hover {
+      background-color: lighten($color, 10%);
+    }
   }
 }
+

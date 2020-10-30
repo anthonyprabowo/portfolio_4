@@ -53,16 +53,6 @@
         margin-left: 10px;
       }
     }
-
-    @each $sign, $color in $warn-signs {
-      .#{$sign}:hover {
-        background-color: lighten($color, 10%);
-      }
-    }
-
-    .default:hover {
-      background-color: lighten($col-secondary, 20%);
-    }
     
     .logo {
       margin-left: initial;

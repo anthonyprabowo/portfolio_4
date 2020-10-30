@@ -1,35 +1,22 @@
-//====================
-// utilities
-//====================
+//==================
+// Utilities
+//==================
 
-@import "utilities/variables";
-@import "utilities/mixins";
-@import "utilities/functions";
+@import "utilities/index";
 
 
 
+//==================
+// Base
+//==================
 
-//====================
-//Base
-//====================
-
-@import "base/normalize";
-@import "base/base";
+@import "base/index";
 
 
 
-//====================
-// components
-//====================
-@import "components/buttons";
-@import "components/forms";
-@import "components/grid";
-@import "components/images";
-@import "components/navigation";
-@import "components/typography";
 
+//==================
+// Components
+//==================
 
-//====================
-// Layout
-//====================
-@import "layout/media-queries";
+@import "components/index";
